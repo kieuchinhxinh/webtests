@@ -1,0 +1,70 @@
+<?php
+session_start();
+include 'dbconnect.php';
+$id=$_REQUEST['id'];
+$query = "SELECT * from ideasevent where id='".$id."'"; 
+$status = mysqli_query($con, $query) or die ( mysqli_connect_error());
+$row = mysqli_fetch_assoc($status);
+
+?>
+<html >
+    <head>
+    
+    </head>
+
+    <body>
+        <h2>Edit Idea Information Page</h2>
+        
+        <?php 
+      
+        if(isset($_POST['new']) && $_POST['new']==1){
+            $id=$_REQUEST['id'];
+            $ename=$_REQUEST['ename'];
+            $deadline=$_REQUEST['deadline'];
+            $ideas_id=$_REQUEST['ideas_id'];
+            $check ="SELECT *FROM ideasevent where ename='$ename' OR deadline ='$deadline' ";
+            $v_c=mysqli_query($con,$check);
+            $notify=mysqli_fetch_assoc($v_c);
+           if($notify){
+            if($notify['ename']===$ename){
+                echo'<p style="text-align:center;text-transform:uppercase;color:red">(ERROR MSG) The ename  has already exist!...... To update the new event information , please enter the new event name  </p>';
+            }
+            if($notify['deadline']===$deadline){
+                echo"the deadline is $deadline has already in used..... Please enter a new deadline ";
+           }
+        }else{
+           
+            $modify="UPDATE ideasevent set 
+            ename='".$ename."', deadline='".$deadline."',idease_id='".$idease_id."'where id='".$id."'";
+             
+    mysqli_query($con, $modify) or die(mysqli_connect_error());
+            $info = "Event Information Updated Successfully. </div></br>
+            <a href='eventmanagement.php'>Details of Updated Event Information </a>";
+            echo '<p style="color:#FF0000;">'.$info.'</p>';}
+            }else {
+       
+        
+        
+        
+        ?>
+    <form action="editevent.php" method="post">
+            <input type="hidden" name="new" value="1"/>
+        <label for="ename">Event name </label>
+        <input name="id" type="hidden" value="<?php echo $row['id'];?>" />
+        <p><input type="text" name="title" placeholder="Enter the event name here........." required value="<?php echo $row['ename'];?>" /></p>
+        <label for="deadline">Event deadline</label>
+        <p><input type="date" name="deadline"  placeholder="Enter event deadline here..." required value="<?php echo $row['deadline'];?>"></p>
+        <label for="idease_id">Ideas link to event  </label>
+        <p><input type="number" name="idease_id"  placeholder="Enter idease_id here..." min="1" max ="3"required value="<?php echo $row['idease_id'];?>"></p>
+     
+
+        
+        
+        
+        
+        
+        <input type="submit" name="submit"value="Submit">
+        <?php } ?>
+</form>
+    </body>
+</html>
