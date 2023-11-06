@@ -3,7 +3,7 @@ session_start();
 ?>
 <html>
     <head>
-        <h2>This is admin homepage</h2>
+        <h2> Admin homepage</h2>
     </head>
     <body>
         <a href="adminprofile.php">View profie</a><br>
