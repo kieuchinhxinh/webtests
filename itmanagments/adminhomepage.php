@@ -13,6 +13,7 @@ session_start();
         <a href="viewlistofqamanager.php">View list of qamanager accounts </a><br>
         <a href="createanewacc.php">Create a new account </a><br>
         <a href="viewlistofuser.php">View list of user details</a><br>
-        <a href="eventmanagemnet.php"> go to eventmanagemnet homepage</a>
+        <a href="eventmanagemnet.php"> go to eventmanagemnet homepage</a><br>
+         <a href="filterlistofacc.php">Filter list of account by role name</a>
     </body>
 </html>
