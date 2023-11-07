@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['ie_id'])) {
                 echo "<p>Title: " . $idea['title'] . "<br> - Explanation: " . $idea['explanation'] . "</p>";
             }
         } else {
-            echo "No ideas found in the selected category.";
+            echo "No ideas found in the selected event.";
         }
     }
     ?>
