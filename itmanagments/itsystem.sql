@@ -119,8 +119,9 @@ CREATE TABLE `ideas` (
   `title` varchar(255) DEFAULT NULL,
   `explanation` text DEFAULT NULL,
   `category_id` int(11) DEFAULT NULL,
-  `ie_id` int(11) NOT NULL,
-  `hastags` varchar(255) NOT NULL
+  `ie_id` int(11) DEFAULT NULL,
+  `hastags` varchar(255) NOT NULL,
+    `file_path` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
