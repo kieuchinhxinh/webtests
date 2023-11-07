@@ -15,7 +15,7 @@
    
     <label for="file">Upload PDF:</label>
     <input type="file" name="file" id="file"><br>
-  
+       <label for="termsandc"> Terms and condition</label><input type="checkbox"  value="I agreed"required>I agreed <br>
     <input type="submit" value="Submit" name="post">
     <?php
         session_start();
