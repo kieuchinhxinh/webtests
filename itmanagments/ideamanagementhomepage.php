@@ -10,7 +10,7 @@ session_start();
 
                 <a href="createidea.php">Post a new idea</a><br>
                <a href="viewallofidea.php">View list of idea</a><br>
-           
+                  <a href="filterideabycategory.php">Filter idea by category</a><br>
                <a href="staff.php">Go back to staff homepage</a><br>
                 <a href="postideawithpdffile.php">Post a new idea by pdf file</a>
                                                             
