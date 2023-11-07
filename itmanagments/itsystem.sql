@@ -47,7 +47,11 @@ INSERT INTO `acc` (`id`, `username`, `password`, `role`, `email`) VALUES
 (7, 'sangnm', '977a3a0d14610aed8cf73340c35ee0ae', 'QAmanager', '');
 
 -- --------------------------------------------------------
-
+CREATE TABLE `dashboard_data` (
+  `id` int(11) NOT NULL,
+  `label` varchar(255)  NOT NULL,
+  `value` int(11) NOT NULL,
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 --
 -- Table structure for table `admin`
 --
