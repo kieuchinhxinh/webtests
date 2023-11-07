@@ -12,8 +12,8 @@ session_start();
                <a href="viewallofidea.php">View list of idea</a><br>
                   <a href="filterideabycategory.php">Filter idea by category</a><br>
                <a href="staff.php">Go back to staff homepage</a><br>
-                <a href="postideawithpdffile.php">Post a new idea by pdf file</a>
-                                                            
+                <a href="postideawithpdffile.php">Post a new idea by pdf file</a><br>
+                  <a href="filterideabyevent.php">Filter idea by event</a><br>                                           
             </div>
     </body>
 </html>
