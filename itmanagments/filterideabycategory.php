@@ -29,9 +29,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['category_id'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ideas Filter</title>
+    <title>Ideas </title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .nav-tabs{
+        background-color:rgb(87, 6, 140) ;    }
+        .nav-tabs a:hover{
+            background-color:rgb(87, 6, 140) ; 
+        }
+        li{
+        background-color:rgb(87, 6, 140) ; ;
+        }
+        a{color: white;}
+  </style>
 </head>
 <body>
+    <ul class="nav nav-tabs"><li><a href="home.php">HOME</a></li>  <li><a href="ideamanagementhomepage.php">IDEA</a></li>
+
+  <li><a href="filterideabycategory.php">IDEA OF CATEGORY</a></li>
+  <li><a href="filterideabyevent.php">IDEA OF EVENT</a></li>
+ 
+</ul>
     <h1>Filter Ideas by Category</h1>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <label for="category_id">Select a category:</label>
