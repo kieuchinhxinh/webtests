@@ -6,7 +6,9 @@ session_start();
     <title>Ideas </title>
      <meta charset="utf-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
  ul {
   list-style-type: none;
@@ -64,7 +66,15 @@ li a:hover:not(.active) {
   border: 1px solid #CA8CE9;  margin: auto;
 
 }
-
+.column.middle {
+  width: 50%; border-radius: 40px 40px 40px 40px;
+  background: #f5e7fe
+;
+  padding: 10px 10px; 
+  height:200px; 
+  margin: auto;
+  margin-top: 10px;
+}
 .pagination a:hover:not(.active) {background-color: #CA8CE9;}
   </style>
 </head>
@@ -82,10 +92,22 @@ li a:hover:not(.active) {
 
  
 </ul>
-<div>
-        <p id="rcorners2">
+<div> <div class="column middle">
+            <a><i class="fa fa-reorder" style="font-size:16px;  color:grey; padding: 6px 4px; "></i><i class="fa fa-edit" style="font-size:16px;float:right;padding:10px 10px;color:black"></i></a>
+            <br><a class="title-idea" href="#">Title</a><br>
+            <a class="title-explanation">Title Explanations Title ExplanationsTitle ExplanationsTitle ExplanationsvTitle ExplanationsTitle Explanations</a><br><br>
+            <a><i class="glyphicon glyphicon-comment" style="font-size:16px;  color:black; padding: 6px 4px; "></i></a>
+            <a><i class="glyphicon glyphicon-thumbs-up" style="font-size:16px;  color:black; padding: 6px 4px;"></i>
+</a>
+<a><i class="glyphicon glyphicon-thumbs-down" style="font-size:16px;  color:black; padding: 6px 4px;" ></i></a><br>
+<input type="text" id="cmt" name="comments" placeholder="Write Comments" required>    
+<input type="submit" value="Post" name="post">
+
+
     <!-- hien thi toan bo idea -->
-        </p>   </div>
+      
+  </div>
+  
          <div class="pagination">
   <a href="#">&laquo;</a>
   <a href="#" class="active">1</a>

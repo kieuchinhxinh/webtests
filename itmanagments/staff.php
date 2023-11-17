@@ -21,10 +21,11 @@ if($row){
 }
 ?>
 
+
 <html>
     <head>
 
-      <meta charset="UTF-8">
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Staff Page</title><script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
@@ -114,9 +115,42 @@ display: inline-block;}
 }
 .title-idea{
     font-weight: bold;
+}.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%; border-radius: 40px 40px 40px 40px;
+  background: #f5e7fe
+;
+  padding: 10px 10px; 
+  height:200px; 
+  margin: auto;
+  margin-top: 10px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
 }
         </style>
-    </head>
+
     <body>
           <div class="top-nav-index">STAFF </div>
  <div class="nav-bar">
@@ -145,12 +179,17 @@ display: inline-block;}
             </div>
 
         </div>
-       <div>
-        <p id="rcorners2">
+     
+
+
+
+<div class="row"><div class="column side"></div>
+  <div class="column middle">
             <a><i class="glyphicon glyphicon-list" style="font-size:16px;  color:black; padding: 6px 4px; "></i></a>
             <br><a class="title-idea" href="#">Title</a><br>
             <a class="title-explanation">Title Explanations Title ExplanationsTitle ExplanationsTitle ExplanationsvTitle ExplanationsTitle Explanations</a><br><br>
-            <a><i class="glyphicon glyphicon-comment" style="font-size:16px;  color:black; padding: 6px 4px; "></i></a>
+            <a><i class='fas fa-comment'
+ style="font-size:16px;  color:black; padding: 6px 4px; "></i></a>
             <a><i class="glyphicon glyphicon-thumbs-up" style="font-size:16px;  color:black; padding: 6px 4px;"></i>
 </a>
 <a><i class="glyphicon glyphicon-thumbs-down" style="font-size:16px;  color:black; padding: 6px 4px;" ></i></a><br>
@@ -159,7 +198,16 @@ display: inline-block;}
 
 
     <!-- hien thi toan bo idea -->
-        </p>   </div>
+      
+  </div>
+  
+  <div class="column side"><h6>Weekly</h6>
+   <ul class="category_id">
+       <li><a>1:</a></li>
+   </ul>
+  </div>
+</div>
+  
     </body>
     
 </html>

@@ -10,36 +10,71 @@ $status = mysqli_query($con, $query) or die ( mysqli_connect_error());
 $row = mysqli_fetch_assoc($status);
 ?>
 <html>
-    <head>
- <meta charset="UTF-8">
+      <head>
+
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Staff PROFILE</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <title> Staff Account</title><script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
         <style>
-            .w3-bar {
-                color: rgb(255, 255, 255);
-                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-            }
+           .dropbtn {
+  background-color: rgb(108, 7, 171);
+  color: #ffffff;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  
+display: inline-block;}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 190px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(108, 7, 171);;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+.nav-bar{
+    background-color:rgb(108, 7, 171) ;  ;
+}
+
+.dropdown-content a:hover {background-color:#f5e7fe
+; }
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgb(108, 7, 171);
+}
              .top-nav-index {
     background-color:rgb(87, 6, 140) ;
         color: rgb(255, 255, 255);
         font-size: 28px;
         padding: 10px 15px;
         font-weight: bold;
-        font-family:'Times New Roman', Times, serif
             }
-            input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
 
 label {
   padding: 12px 12px 12px 0;
@@ -47,17 +82,18 @@ label {
 }
 
 input[type=submit] {
-  background-color: #04AA6D;
+  background-color: red;
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   float: right;
+  font-weight: bold;
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: red;
 }
 
 .container {
@@ -74,6 +110,11 @@ input[type=submit]:hover {
 }
 
 .col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+  padding:5px 5px;
+}.col-15 {
   float: left;
   width: 75%;
   margin-top: 6px;
@@ -95,16 +136,8 @@ input[type=submit]:hover {
   }
 }
 h3{
-      font-size: 20px;
     font-weight: bold;
-    background-color:rgb(124, 8, 196);
-margin:auto;padding: 40px 40px;    width: 80%;
-    color: white;
-    text-align: center;
-    font-family: monospace;
-}
-}
-
+}     
         </style>
     </head>
     <?php
@@ -148,40 +181,46 @@ echo '<p style="color:#FF0000;">'.$info.'</p>';}
     
     
     ?>
-       <body ><div class="top-nav-index">STAFF </div>
-    <div class="w3-bar" style="background-color:#CA8CE9;float:right;">
-            <a href="staff.php" class="w3-bar-item w3-button">HOME</a>
-
-            <div class="w3-dropdown-hover">
-                <button class="w3-button">IDEA</button>
-                <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    <a href="viewallofidea.php" class="w3-bar-item w3-button">View All Idea</a>
-                    <a href="ideamanagementhomepage.php" class="w3-bar-item w3-button">Idea Home</a>
-                    <a href="viewCourseDetail" class="w3-bar-item w3-button">Course Detail</a>
+       <body >
+ <div class="top-nav-index">STAFF </div>
+ <div class="nav-bar">
+          <div class="dropdown">
+                <button class="dropbtn"><a href="staff.php" style="color:#ffffff"><i style="font-size:18px; padding:0px 6px" class="fa">&#xf0a8;</i>HOME</a></button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">IDEA</button>
+                <div class="dropdown-content">
+                     <a href="viewallofidea.php" >IDEAS</a>
+                    <a href="ideamanagementhomepage.php" >IDEA HOME</a>
                 </div>
             </div>
-            
-            
-          
-            <div class="w3-dropdown-hover">
-                <button class="w3-button">PORTFOLIO</button>
-                <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    <a href="viewlistofstaffaccount.php" class="w3-bar-item w3-button">View All Staff Account</a>
-                    <a href="editstaffacc.php" class="w3-bar-item w3-button">Profile</a>
-                    <a href="logout.php" class="w3-bar-item w3-button">Logout</a>
+         <div class="dropdown">
+             <button class="dropbtn">UPLOAD</button>
+                <div class="dropdown-content">
+                    <a href="postideawithpdffile.php" ><i class="fa-solid fa-paperclip"></i>FILE PDF</a>
+                </div>
+            </div>
+            <div class="dropdown">
+             <button class="dropbtn">PORTFOLIO</button>
+                <div class="dropdown-content">
+                    <a href="editstaffacc.php" >PROFILE</a>
+                    <a href="logout.php" >LOG OUT</a>
                 </div>
             </div>
 
         </div>
-<br></br>
-<br><br>
+     
+
+
+
     <div class="from-group">
         <div class="container ">
     <div >
         <form action="editstaffacc.php" method="post">
-            <h3>EDIT STAFF ACCOUNT</h3><i class="glyphicon glyphicon-user-pen"></i>
+            <h3><i class="fa fa-id-card" style="font-size:26px;padding:10px 10px;color:rgb(87, 6, 140)"></i>EDIT STAFF ACCOUNT
+</h3>
             <div class="row">
-    <div class="col-25"><label for="username"><i class="fa-solid fa-circle-user">Username</i> </label></div>
+    <div class="col-25"><label for="username">Username </label></div>
         <div class="col-75">
 
             <input type="hidden" name="new" value="1"/>
@@ -192,9 +231,9 @@ echo '<p style="color:#FF0000;">'.$info.'</p>';}
     <div class="col-25">
         <label for="password">Password </label></div>  <div class="col-75">
 
-        <p><input type="password" name="password" style="height:200px;" placeholder="Enter Password here......" 
+        <p><input type="password" name="password"  placeholder="Enter Password here......" 
 required value="<?php echo $row['password'];?>" /></p></div></div>
-<div class="row"><div class="col-25"><i class="fa-solid fa-id-card"></i></div></div>
+
 <div class="row">
     <div class="col-25">
 <label for="email">Email </label>
