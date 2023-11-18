@@ -25,14 +25,13 @@ if($row){
 <html>
     <head>
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Staff Page</title><script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        
         <style>
            .dropbtn {
   background-color: rgb(108, 7, 171);
@@ -117,7 +116,7 @@ display: inline-block;}
     font-weight: bold;
 }.column {
   float: left;
-  padding: 10px;
+  padding: 5px;
 }
 
 /* Left and right column */
@@ -149,65 +148,123 @@ display: inline-block;}
     width: 100%;
   }
 }
+h6{
+
+ margin-left: 6px ;
+  border-left:6px outset blueviolet ;
+}/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
         </style>
 
     <body>
-          <div class="top-nav-index">STAFF </div>
- <div class="nav-bar">
-          <div class="dropdown">
-                <button class="dropbtn"><a href="staff.php" style="color:#ffffff">HOME</a></button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">IDEA</button>
-                <div class="dropdown-content">
-                     <a href="viewallofidea.php" >IDEAS</a>
-                    <a href="ideamanagementhomepage.php" >IDEA HOME</a>
-                </div>
-            </div>
-         <div class="dropdown">
-             <button class="dropbtn">UPLOAD</button>
-                <div class="dropdown-content">
-                    <a href="postideawithpdffile.php" ><i class="fa-solid fa-paperclip"></i>FILE PDF</a>
-                </div>
-            </div>
-            <div class="dropdown">
-             <button class="dropbtn">PORTFOLIO</button>
-                <div class="dropdown-content">
-                    <a href="editstaffacc.php" >PROFILE</a>
-                    <a href="logout.php" >LOG OUT</a>
-                </div>
-            </div>
-
-        </div>
-     
-
-
-
-<div class="row"><div class="column side"></div>
-  <div class="column middle">
-            <a><i class="glyphicon glyphicon-list" style="font-size:16px;  color:black; padding: 6px 4px; "></i></a>
-            <br><a class="title-idea" href="#">Title</a><br>
-            <a class="title-explanation">Title Explanations Title ExplanationsTitle ExplanationsTitle ExplanationsvTitle ExplanationsTitle Explanations</a><br><br>
-            <a><i class='fas fa-comment'
- style="font-size:16px;  color:black; padding: 6px 4px; "></i></a>
-            <a><i class="glyphicon glyphicon-thumbs-up" style="font-size:16px;  color:black; padding: 6px 4px;"></i>
-</a>
-<a><i class="glyphicon glyphicon-thumbs-down" style="font-size:16px;  color:black; padding: 6px 4px;" ></i></a><br>
-<input type="text" id="cmt" name="comments" placeholder="Write Comments" required>    
-<input type="submit" value="Post" name="post">
-
-
-    <!-- hien thi toan bo idea -->
-      
-  </div>
-  
-  <div class="column side"><h6>Weekly</h6>
-   <ul class="category_id">
-       <li><a>1:</a></li>
-   </ul>
-  </div>
+    <div class="top-nav-index">STAFF <i class="fa fa-sign-out" style="float:right;font-size: 28px; "> </i>
 </div>
-  
+ 
+         <div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs" style="background-color:#ffffff; color:white"><i class="fa fa-navicon" style="font-size:16px; color:rgb(87,6,140); padding:10px "></i>
+
+      <ul class="nav" style="font-weight: bold;" >
+        <li><a href="staff.php" style="color:rgb(87, 6, 140)">NEWS FEED<i class="fa fa-newspaper-o" style="padding: 5px 5px;"></i>
+
+</a></li>
+                <li><a href="staff.php" style="color:rgb(87, 6, 140)">MESSAGES<i class="fa fa-comment" style="padding: 5px 5px;"></i>
+</a></li>
+
+        <li><a href="eventmanagemnet.php" style="color:rgb(87, 6, 140)">EVENTS<i class="fa fa-object-group" style="padding: 5px 5px;"></i>
+</a></li>
+
+        <li> 
+                    <a href="ideamanagementhomepage.php" style="color:rgb(87, 6, 140)">IDEAS <i class="fa fa-lightbulb-o" style="padding: 5px 5px;"></i>
+</a></li>
+        <li><a href="postideawithpdffile.php" style="color:rgb(87, 6, 140)">DOCUMENTS<i class="fa fa-folder" style="padding: 5px 5px;"></i></a></li>
+        <li>  <a href="editstaffacc.php" style="color:rgb(87, 6, 140)" >PROFILE<i class="fa fa-user-circle" style="padding: 5px 5px;"></i></a></li>
+      </ul><br>
+    </div>
+    <br>
+
+      <div class="col-sm-9">
+           <div class="row">
+        <div class="col-sm-8">
+          <div class="well" style="background-color: #f9ecf9;border-color: #f9ecf9;">
+
+       <div class="user-block"> 
+        <span><i class="fa fa-user-circle" style="padding: 5px 5px;"></i>
+        Posted by:  <!-- hien thi username -->
+                               </span>
+                           </div>
+                             <div class="idea-block">  
+                                <span><i class="fa fa-star"></i>
+                                <a>Idea title:</a><br></span>
+                              <span>  <a>Idea Explanation:</a>
+                                   </span>
+</div>
+<div class="thumb-block">
+    <span>
+        <a>
+        <!-- Tong so like -->
+        <i class="glyphicon glyphicon-thumbs-up" style="font-size:13px;  color:black; padding: 6px 4px;" ></i>
+    </a>
+</span>
+    <span>
+        <a>
+        <!-- Tong so dislike -->
+        <i class="glyphicon glyphicon-thumbs-down" style="font-size:13px;  color:black; padding: 6px 4px;" ></i>
+    </a>
+</span>
+</div>
+<div class="cmt-block">
+    <span>
+        <a>
+        <!-- Tong so comments -->
+      <i class='fa fa-comment'style="font-size:13px;  color:black; padding: 6px 4px; "></i>
+    </a>
+</span>
+
+           
+<input type="text" id="cmt" name="comments" placeholder="Write Comments" required>    
+<input type="submit" value="POST" name="post" >
+</div>
+        </div>
+    </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <div class="idea-top">
+<table class="table table-hover" style="font-size:11px;"><h6 style="text-align: left; font-weight: bold; font-size:14px"><i class='fa fa-line-chart' style='font-size:18px;color:red; padding:4px 4px;'></i>TOP IDEAS </h6> 
+    <thead>
+      <tr>
+       <th>No</th> 
+       <th>Idea Title</th>
+        <th><i class="fa fa-eye"></i>
+</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+</tbody>
+  </table></div>
+          </div>
+        </div>
+      </div>
     </body>
     
 </html>

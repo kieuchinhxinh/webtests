@@ -37,7 +37,8 @@ if (mysqli_num_rows($result) > 0) {
     }
 ?>
 <html>
-    <head>
+    <head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
         * {
   box-sizing: border-box;
@@ -46,9 +47,9 @@ if (mysqli_num_rows($result) > 0) {
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 2px solid #f5e7fe;
   border-radius: 4px;
-  resize: vertical;
+  resize: vertical;border-style: outset;
 }
 
 label {
@@ -63,11 +64,16 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  float: right;
+  float: right; 
+  width: 80px;
+  height: 60px;
+  background: #45a049;
+  transition: width 2s;
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color:red; 
+  width: 100px;
 }
 
 .container {
@@ -89,6 +95,10 @@ input[type=submit]:hover {
   margin-top: 6px;
   padding:5px 5px;
 }
+.col-10{
+    float: right;
+    font-weight: bold;
+}
 
 /* Clear floats after the columns */
 .row::after {
@@ -107,17 +117,33 @@ input[type=submit]:hover {
 .header{
     font-size: 24px;
     font-weight: bold;
-    background-color:rgb(87, 6, 140) ;
-    margin-top: 0;
-padding: 40px 40px;    width: 100%;
-    color: white;
+    background-color:#f5e7fe;
+padding: 40px 40px;    width: 60%;
+    color: rgb(87, 6, 140) ;
     text-align: center;
     font-family: monospace;
+    margin: auto;
+}        .top-nav-index {
+    background-color:rgb(87, 6, 140) ;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        padding: 10px 10px;
+        font-weight: bold;
+        height: 50px;  
+ 
 }
+
+
+    
 </style>
     </head>
     <body>
-    <div class="header"><h1>CREATE NEW IDEA</h1></div>
+    <div class="top-nav-index"><i class="fa fa-toggle-left" style="padding: 5px 5px;"></i><a href="ideamanagementhomepage.php" style="color:#ffffff;">IDEA HOMEPAGE
+
+ </a>
+</div>
+<br>    <div class="header"><h1>CREATE NEW IDEA</h1></div>
+    <br>
         <div class="container ">
             <form action='createidea.php' method="post">
               <div class="row">
@@ -158,8 +184,9 @@ padding: 40px 40px;    width: 100%;
    <div class="row">
     <div class="col-25"><label for="termsandc"> Terms and condition</label></div>
     <div class="col-75"> 
-<input type="radio"  value="I agreed"required>I agreed <br></div></div>
-                <input type="submit" name="add" value="Add">  </div>
+<input type="radio"  value="I agreed"required>I Agreed <br></div></div>
+              <div class="row">
+    <div class="col-10">  <input type="submit" name="add" value="Add"> </div> </div>
                 <?php
                 if(isset($_POST['add'])){
                     $db_query="SELECT i.title, i.explanation, i.category_id,c.name ,i.ie_id,c.description

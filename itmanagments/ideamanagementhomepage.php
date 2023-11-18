@@ -5,115 +5,148 @@ session_start();
     <head>
     <title>Ideas </title>
      <meta charset="utf-8">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
- ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgb(87, 6, 140) ;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #ffffff;
-}
-#rcorners2 {
-  border-radius: 40px 40px 40px 40px;
-  background: #f5e7fe
-;
-  padding: 10px 10px; 
-  width: 800px;
-  height:200px; 
-  margin: auto;
-  margin-top: 10px;
-}
-.pagination {
+         <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+  
+             .top-nav-index {
+    background-color:rgb(87, 6, 140) ;
+        color: rgb(255, 255, 255);
+        font-size: 26px;
+        padding: 10px 10px;
+        font-weight: bold;
+            }
+            
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color:#ffffff;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+    .nav:hover {
+background-color:#f5e7fe; padding:10px 10px   }
+.nav{
+    padding: 10px 10px;
+}input[type=submit] {
+    color: rgb(230, 0, 0);
+  padding: 4px 8px;
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+} input[type=text], select {
+  width: 80%;
+  padding: 12px 10px;
+  margin: 8px 0;
   display: inline-block;
-  margin: auto;
-  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 12px;
 }
-
-.pagination a {
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background-color .3s;
-  border: 1px solid #ddd;
-  margin: 0 4px; 
-
+.col-sm-8{
+    background-color:#f9ecf9 ;
 }
+  </style></head>
 
-.pagination a.active {
-  background-color: #CA8CE9;
-  color: white;
-  border: 1px solid #CA8CE9;  margin: auto;
+    <body>      
 
-}
-.column.middle {
-  width: 50%; border-radius: 40px 40px 40px 40px;
-  background: #f5e7fe
-;
-  padding: 10px 10px; 
-  height:200px; 
-  margin: auto;
-  margin-top: 10px;
-}
-.pagination a:hover:not(.active) {background-color: #CA8CE9;}
-  </style>
-</head>
-    <body>        <ul>
-            <li><a href="staff.php"><i class="glyphicon glyphicon-user"></i>
-</a></li>
+    <div class="top-nav-index"><a href="staff.php" style="color:#ffffff"><i class="fa fa-toggle-left"></i>
+STAFF </a>
+</div>
+ 
+    <div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs" style="background-color:#ffffff; color:white"><i class="fa fa-navicon" style="font-size:16px; color:rgb(87,6,140); padding:10px "></i>
 
-         <li><a href="ideamanagementhomepage.php">IDEA HOME</a></li>
+      <ul class="nav" style="font-weight: bold;" >
 
-  <li><a href="filterideabycategory.php">IDEA OF CATEGORY</a></li>
-  <li><a href="filterideabyevent.php">IDEA OF EVENT</a></li>
-  <li><a href="createidea.php">NEW IDEA</a></li>
-  <li><a href="viewallofidea.php">IDEAS</a></li>
-  <li><a href="postideawithpdffile.php">FILE</a></li>
+         <li><a href="ideamanagementhomepage.php" style="color:rgb(87, 6, 140)">IDEA HOME</a></li>
+
+  <li><a href="filterideabycategory.php" style="color:rgb(87, 6, 140)">IDEA OF CATEGORY</a></li>
+  <li><a href="filterideabyevent.php" style="color:rgb(87, 6, 140)">IDEA OF EVENT</a></li>
+  <li><a href="createidea.php" style="color:rgb(87, 6, 140)">NEW IDEA</a></li>
+  <li><a href="createidea.php"style="color:rgb(87, 6, 140)" >NEW IDEA</a></li>
+  <li><a href="viewallofidea.php"style="color:rgb(87, 6, 140)">IDEAS</a></li>
+  <li><a href="postideawithpdffile.php" style="color:rgb(87, 6, 140)">FILE</a></li>
 
  
-</ul>
-<div> <div class="column middle">
-            <a><i class="fa fa-reorder" style="font-size:16px;  color:grey; padding: 6px 4px; "></i><i class="fa fa-edit" style="font-size:16px;float:right;padding:10px 10px;color:black"></i></a>
-            <br><a class="title-idea" href="#">Title</a><br>
-            <a class="title-explanation">Title Explanations Title ExplanationsTitle ExplanationsTitle ExplanationsvTitle ExplanationsTitle Explanations</a><br><br>
-            <a><i class="glyphicon glyphicon-comment" style="font-size:16px;  color:black; padding: 6px 4px; "></i></a>
-            <a><i class="glyphicon glyphicon-thumbs-up" style="font-size:16px;  color:black; padding: 6px 4px;"></i>
-</a>
-<a><i class="glyphicon glyphicon-thumbs-down" style="font-size:16px;  color:black; padding: 6px 4px;" ></i></a><br>
+      </ul><br>
+    </div>
+    <br>
+
+      <div class="col-sm-9">
+           <div class="row">
+        <div class="col-sm-8">
+          <div class="well" style="background-color: #f5e7fe;border-color: #f9ecf9;">
+
+       <div class="user-block"> 
+        <span><i class="fa fa-user-circle" style="padding: 5px 5px;"></i>
+        Posted by:  <!-- hien thi username -->
+                               </span>
+                           </div>
+                             <div class="idea-block">  
+                                <span><i class="fa fa-star"></i>
+                                <a>Idea title:</a><br></span>
+                              <span>  <a>Idea Explanation:</a>
+                                   </span>
+</div>
+<div class="thumb-block">
+    <span>
+        <a>
+        <!-- Tong so like -->
+        <i class="glyphicon glyphicon-thumbs-up" style="font-size:13px;  color:black; padding: 6px 4px;" ></i>
+    </a>
+</span>
+    <span>
+        <a>
+        <!-- Tong so dislike -->
+        <i class="glyphicon glyphicon-thumbs-down" style="font-size:13px;  color:black; padding: 6px 4px;" ></i>
+    </a>
+</span>
+</div>
+<div class="cmt-block">
+    <span>
+        <a>
+        <!-- Tong so comments -->
+      <i class='fa fa-comment'style="font-size:13px;  color:black; padding: 6px 4px; "></i>
+    </a>
+</span>
+
+           
 <input type="text" id="cmt" name="comments" placeholder="Write Comments" required>    
-<input type="submit" value="Post" name="post">
+<input type="submit" value="POST" name="post" >
+</div>
+        </div>
+    </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <div class="idea-top">
+<table class="table table-hover" style="font-size:11px;"><h6 style="text-align: left; font-weight: bold; font-size:14px"><i class='fa fa-line-chart' style='font-size:18px;color:red; padding:4px 4px;'></i>TOP IDEAS </h6> 
+    <thead>
+      <tr>
+       <th>No</th> 
+       <th>Idea Title</th>
+        <th><i class="fa fa-eye"></i>
+</th>
 
+      </tr>
+    </thead>
+    <tbody>
 
-    <!-- hien thi toan bo idea -->
-      
-  </div>
-  
-         <div class="pagination">
-  <a href="#">&laquo;</a>
-  <a href="#" class="active">1</a>
-  <a href="#" >2</a>
-  <a href="#">3</a>
-  <a href="#">&raquo;</a>
-  </div> 
+</tbody>
+  </table></div>
+          </div>
+        </div>
+      </div>
     </body>
 </html>
