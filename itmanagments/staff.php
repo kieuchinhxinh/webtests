@@ -209,7 +209,13 @@ h6{
        <div class="user-block"> 
         <span><i class="fa fa-user-circle" style="padding: 5px 5px;"></i>
         Posted by:  <!-- hien thi username -->
+   
                                </span>
+<span>        <a style="color:red; float:right;" ><i class=" fa fa-trash"></i></a>
+
+    
+                               </span><br><span>
+                                  <a style="color:blue; float:right;" > <i class="fa fa-pencil"></i> </a></span>
                            </div>
                              <div class="idea-block">  
                                 <span><i class="fa fa-star"></i>
